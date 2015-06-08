@@ -1,0 +1,40 @@
+@charset "IBM437";
+div { background-color: red; }
+
+/* variables */
+.facebook { background: url("../images/facebook") no-repeat center center transparent; padding-left: 30px; height: 30px; }
+
+.twitter { background: url("../images/twitter") no-repeat center center transparent; padding-left: 30px; height: 30px; }
+
+.youtube { background: url("../images/youtube") no-repeat center center transparent; padding-left: 30px; height: 30px; }
+
+.rss { background: url("../images/rss") no-repeat center center transparent; padding-left: 30px; height: 30px; }
+
+.par-1 { margin-right: 20px; }
+
+.par-2 { margin-right: 40px; }
+
+.par-3 { margin-right: 60px; }
+
+.par-4 { margin-right: 80px; }
+
+.par-1 { margin-left: 20px; }
+
+.par-2 { margin-left: 40px; }
+
+.par-3 { margin-left: 60px; }
+
+.par-4 { margin-left: 80px; }
+
+h1 { color: #4e6cb0; }
+
+h2 { color: #ff6699; }
+
+.triangle { width: 0; height: 0; background-color: #fff; border-left: 200px solid transparent; border-right: 200px solid transparent; border-bottom: 200px solid #888888; }
+
+div { width: 150px – 50px; background-color: #0f53f0; color: #94a6d0; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+div.with-radius { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+a { color: red; }
+a:hover { color: Green; }

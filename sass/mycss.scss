@@ -1,0 +1,97 @@
+@import "new";
+
+/* variables */
+$my_blue: #4e6cb0;
+
+$fonts: Helvetica, Arial, sans-serif;
+
+$image_path: "../images/pic1.png";
+
+$margin: 20px;
+
+$width: 20px;
+
+$light_blue: lighten($my_blue, 20%);
+
+$flashy_blue: saturate($my_blue, 50%);
+
+// mixin example
+@mixin border-radius($radius: 10px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// mixin with if condition example 
+@mixin triangle($width, $dir, $color){
+	width: 0; height: 0;
+	background-color: #fff;
+	@if $dir == up{
+		border-left: $width solid transparent;
+		border-right: $width solid transparent;
+		border-bottom: $width solid $color;
+	} @else if $dir == down{
+		border-left: $width solid transparent;
+		border-right: $width solid transparent;
+		border-top: $width solid $color;
+	}
+}
+
+// Lists & each
+$icons:( facebook, twitter, youtube, rss );
+@each $social in $icons{
+	.#{$social}{
+		background: url('../images/#{$social}') no-repeat center center transparent;
+		padding-left: 30px;
+		height: 30px;
+	}
+}
+
+//For Loop
+@for $i from 1 through 4 {
+	.par-#{$i} { margin-right: 20px * $i; }
+}
+
+//While loop
+$p: 1;
+@while $p < 5 {
+	.par-#{$p} { margin-left: 20px * $p; }
+	$p: $p + 1;
+}
+
+
+h1{
+	color: $my_blue;
+}
+
+h2{
+	color: #990033 + #666666;
+}
+
+h3{
+	
+}
+
+.triangle{
+	@include triangle(200px, up, #888);
+}
+
+div{
+	width: 25px * 4 + 100px / 2 – 50px; 
+	background-color: $flashy_blue;
+	color: $light_blue;
+	
+	@include border-radius(4px);
+}
+
+div.with-radius{
+	@include border-radius(4px);
+}
+
+a{
+	color: red;
+	&:hover{
+		color: Green;		
+	}
+}
+
